@@ -3191,7 +3191,7 @@ private: System::Windows::Forms::Button^ button1;
 	private: System::Void language_button_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		if (k == 0) {
-			m_input = gcnew TxtInput("send, {lshift}&{lalt}\r\nsleep, 50", "Сменить раскладку клавиатуры", skripteditor_window);
+			m_input = gcnew TxtInput("send, {LAlt down}{LShift down}{LAlt up}{LShift up}\r\nsleep, 50", "Сменить раскладку клавиатуры", skripteditor_window);
 			m_input->Execute();
 		}
 	}
