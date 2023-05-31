@@ -3240,6 +3240,9 @@ private: System::Windows::Forms::Button^ button1;
 		writer->Close();
 		String^ text = "Комбинация клавиш: ";
 		skripteditor_window->Text += text;
+		skripteditor_window->SelectionStart = skripteditor_window->Text->Length;
+		skripteditor_window->AppendText(Environment::NewLine);
+		skripteditor_window->ScrollToCaret();
 	}
 	private: System::Void cancel_button_Click(System::Object^ sender, System::EventArgs^ e) 
 	{
